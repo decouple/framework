@@ -4,7 +4,7 @@ An attempt to create a loosely coupled toolkit for Hack.
 Based loosely on Laravel.
 
 ## Installation
-```composer create-project decouple/framework```
+```composer create-project decouple/framework=dev-master```
 ##### OR
 ```git clone gogs@git.phenocode.com:decouple/framework.git```
 
