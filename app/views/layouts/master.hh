@@ -20,7 +20,6 @@ class :layouts:master extends :decouple:ui:base {
       <html>
         {$head}
         <body>
-          <navigation:horizontal schema={$this->getAttribute('schema')}/>
           {$this->getChildren()}
         </body>
       </html>

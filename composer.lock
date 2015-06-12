@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/cli.git",
-                "reference": "ff00354855b7ff6139d9ebd66987055aefabbbf4"
+                "reference": "692424f4c1666df8d08026a467f9d1c15c269f10"
             },
             "type": "library",
             "autoload": {
@@ -33,7 +33,7 @@
                 }
             ],
             "description": "Hack command line utility created for Decouple framework.",
-            "time": "2015-06-09 08:52:12"
+            "time": "2015-06-10 06:46:30"
         },
         {
             "name": "decouple/common",
@@ -41,7 +41,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/common.git",
-                "reference": "ef5983e94aa447d9f24a4b758cac1dabca4e4e6c"
+                "reference": "118eab4efe30a4cb403a9c4aec29afd48cc8eb32"
             },
             "type": "library",
             "autoload": {
@@ -60,7 +60,7 @@
                 }
             ],
             "description": "Common requirements for the Decouple framework.",
-            "time": "2015-06-09 08:22:30"
+            "time": "2015-06-10 07:13:24"
         },
         {
             "name": "decouple/dbal",
@@ -68,7 +68,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/dbal.git",
-                "reference": "d133212cb59c95aec0b7e6e455268c673ee5d15a"
+                "reference": "1036f2d0e614ba9be6e85aba0d9df1e487c56400"
             },
             "type": "library",
             "autoload": {
@@ -95,7 +95,7 @@
                 }
             ],
             "description": "Hack DBAL written for Decouple Framework.",
-            "time": "2015-06-09 08:47:48"
+            "time": "2015-06-10 06:48:19"
         },
         {
             "name": "decouple/dbal-cli",
@@ -103,7 +103,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/dbal-cli",
-                "reference": "5354c802714fe7727b752c7686b09ccd915485b0"
+                "reference": "0777bd560a58709ce368647d3391f645d190b5d7"
             },
             "type": "library",
             "autoload": {
@@ -124,7 +124,7 @@
                 }
             ],
             "description": "Command line interface for Decouple Framework DBAL",
-            "time": "2015-06-09 09:06:33"
+            "time": "2015-06-10 07:24:33"
         },
         {
             "name": "decouple/decoupler",
@@ -132,7 +132,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/decoupler.git",
-                "reference": "20fa71b2a70f982a36a969fd35a323aa7e117e8a"
+                "reference": "79caae226b654f371c9353c178caa02905370128"
             },
             "type": "library",
             "autoload": {
@@ -152,7 +152,7 @@
                 }
             ],
             "description": "Hack dependency injector based on reflection created for the Decouple framework",
-            "time": "2015-06-09 08:57:04"
+            "time": "2015-06-10 06:50:45"
         },
         {
             "name": "decouple/http",
@@ -160,11 +160,13 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/http.git",
-                "reference": "8199a2cd2f95819adf713a70d6fd2e1fab4ad1e0"
+                "reference": "8a9739d06fcf3f4c97da55fc293845c00f617342"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
+                    "Decouple\\HTTP\\Router\\": "Router/",
+                    "Decouple\\HTTP\\Request\\": "Request/",
                     "Decouple\\HTTP\\": ""
                 }
             },
@@ -179,7 +181,7 @@
                 }
             ],
             "description": "HTTP Application Container for the Decouple Framework",
-            "time": "2015-06-09 08:26:31"
+            "time": "2015-06-10 06:51:09"
         },
         {
             "name": "decouple/log",
@@ -187,7 +189,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/log.git",
-                "reference": "f4ca234ca93d09a542c8fbe881eda45bf74b17de"
+                "reference": "5dcde9aceb3c0935c38a0bdf73c3e03e0f144f74"
             },
             "type": "library",
             "autoload": {
@@ -206,7 +208,7 @@
                 }
             ],
             "description": "Hack file logging utility created for Decouple Framework",
-            "time": "2015-06-09 08:27:19"
+            "time": "2015-06-10 06:51:51"
         },
         {
             "name": "decouple/orm",
@@ -214,11 +216,12 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/orm.git",
-                "reference": "28ced9c7df62370070ac1c64c977bd24120d4429"
+                "reference": "f05bd98a362a1c82cbc892dd46bdb0c002a85482"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
+                    "Decouple\\ORM\\Model\\": "Model/",
                     "Decouple\\ORM\\": ""
                 }
             },
@@ -233,7 +236,7 @@
                 }
             ],
             "description": "Hack ORM created for the Decouple framework",
-            "time": "2015-06-09 08:28:10"
+            "time": "2015-06-10 06:52:40"
         },
         {
             "name": "decouple/registry",
@@ -241,7 +244,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/registry.git",
-                "reference": "077a960ee63feaa41c2b265b83039e28b436e34d"
+                "reference": "83aaf71929fb0a1edac1206be782b14c0d0f806b"
             },
             "type": "library",
             "autoload": {
@@ -260,7 +263,7 @@
                 }
             ],
             "description": "Hack registry container created for Decouple framework, used to store data to be used by the injector.",
-            "time": "2015-06-09 08:29:58"
+            "time": "2015-06-10 06:53:35"
         },
         {
             "name": "decouple/test",
@@ -268,7 +271,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/test.git",
-                "reference": "f75370dc8346b3dca71c95572ee4241b8a45d12a"
+                "reference": "7e9cb5456d8e334757f8995beb49d3bf38af01bb"
             },
             "type": "library",
             "autoload": {
@@ -287,7 +290,7 @@
                 }
             ],
             "description": "Hack unit testing utility created for Decouple framework",
-            "time": "2015-06-09 08:31:06"
+            "time": "2015-06-10 06:54:17"
         },
         {
             "name": "decouple/ui",
@@ -295,7 +298,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/ui.git",
-                "reference": "2ff435d8ffe6ff1ee34d7d69c9d833ff43c1a524"
+                "reference": "e5097c1581a6bb5ceded0155d1fb29dfdf442105"
             },
             "type": "library",
             "autoload": {
@@ -314,7 +317,7 @@
                 }
             ],
             "description": "Hack UI toolkit for Decouple framework",
-            "time": "2015-06-09 19:48:41"
+            "time": "2015-06-10 06:54:55"
         },
         {
             "name": "facebook/xhp-lib",

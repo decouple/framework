@@ -1,20 +1,16 @@
 <?hh // decl
+use Decouple\Common\Contract\DB\Schema;
 class :layouts:header extends :decouple:ui:base {
-  public string $title = '';
+  attribute
+    Schema schema @required,
+    string title @required;
 
   public function compose() {
-    $header =
-    <header>
-      <h1>{$this->getTitle()}</h1>
-      <layouts:navigation/>
-    </header>;
-  }
-
-  public function getTitle() : string {
-    return $this->title;
-  }
-
-  public function setTitle(string $title) : void {
-    $this->title = $title;
+    return
+      <header>
+        <h1>{$this->getAttribute('title')}</h1>
+        <navigation:horizontal schema={$this->getAttribute('schema')}/>
+      </header>
+    ;
   }
 }

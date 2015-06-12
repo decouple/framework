@@ -8,51 +8,20 @@ class FrontController {
   public function index(
     Driver $driver,
     Schema $schema,
-    DebugRegistry $debug,
-  ): string {
-    $view =
-      <front:index schema={$schema}>
-      </front:index>;
-    $db = $driver->schema('decouple');
-
-    $news = $db->table('articles');
-    $articles = $news->select(
+    DebugRegistry $debug
+  ): :xhp {
+    $schema = $driver->schema('decouple');
+    $articles_table = $schema->table('articles');
+    $articles = $articles_table->select(
       Vector {'id', 'title', 'content', 'author_id', 'created_at', 'image'},
     )->where('deleted_at', '=', '0000-00-00 00:00:00')->fetchAll();
 
-    $content = <div />;
-    if (is_null($articles)) {
-      $error =
-        <div class="ui error message">
-          <h2>
-            Oops!
-          </h2>
-          <p>
-            I couldn{"'"}t find any news articles to display... Try again?
-          </p>
-        </div>;
-      $content->appendChild($error);
-    } else {
-      $container = <news:articles />;
-      foreach ($articles as $article) {
-        $body =
-          <news:article
-            title={(string)$article['title']}
-            content={(string)$article['content']}
-            date={(string)$article['created_at']}
-            image={(string)$article['image']}
-          />;
-        $container->appendChild($body);
-      }
-      $content->appendChild($container);
-    }
-    $view->appendChild($content);
-    $view->appendChild(<br />);
-    $view->appendChild(<hr />);
-    $view->appendChild(<br />);
-    $view->appendChild(perf_info($debug));
-
-    return (string) $view;
+    return
+      <front:index schema={$schema} title="Decouple">
+        <news:articles articles={$articles} />
+        {perf_info($debug)}
+      </front:index>
+    ;
   }
 
   public function test(): string {

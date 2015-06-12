@@ -1,26 +1,24 @@
 <?hh // decl
-class :news:article extends :decouple:ui:base {
+class :news:article extends :x:element {
+  use XHPAsync;
   attribute
-    string title = "",
-    string image = "",
-    string content = "",
-    string date = "";
+    KeyedTraversable<string,mixed> article @required;
 
-  public function compose()
-  {
+  public async function asyncRender(): Awaitable<XHPRoot> {
+    $article = $this->getAttribute('article');
     return
       <div class="item">
         <div class="ui large rounded image">
-          <img src={$this->getAttribute('image')}/>
+          <img src={$article['image']}/>
           <a class="like ui corner label">
             <i class="like icon"></i>
           </a>
         </div>
         <h4 class="header"></h4>
         <div class="content">
-          <div class="name">{$this->getAttribute('title')}</div>
-          <p class="description">{$this->getAttribute('content')}</p>
-          <div class="extra">{$this->getAttribute('date')}</div>
+          <div class="name">{$article['title']}</div>
+          <p class="description">{$article['content']}</p>
+          <div class="extra">{$article['date']}</div>
         </div>
       </div>
     ;
