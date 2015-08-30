@@ -102,7 +102,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://git.phenocode.com/decouple/dbal-cli",
+                "url": "http://git.phenocode.com/decouple/dbal-cli.git",
                 "reference": "0777bd560a58709ce368647d3391f645d190b5d7"
             },
             "type": "library",
