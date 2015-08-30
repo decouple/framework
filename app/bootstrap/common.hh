@@ -14,9 +14,13 @@ use Debug\DebugRegistry;
 // Decoupler configuration
 $driver = new DPDOMySQLDriver();
 $driver->connect(
-  Map {'type' => 'mysql', 'host' => 'localhost'},
+  Map {
+    'dbname' => 'decouple',
+    'type' => 'mysql',
+    'host' => 'localhost'
+  },
   'decouple',
-  'secret',
+  'secret'
 );
 $driver->connector()->connection()
   ->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
