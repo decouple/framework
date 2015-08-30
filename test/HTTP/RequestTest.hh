@@ -19,7 +19,7 @@ class RequestTest extends TestCase {
       'foo' => 'bar',
     ];
     $files = [];
-    $request = new Request($uri, Map::fromArray($get), Map::fromArray($post), Map::fromArray($files));
+    $request = new Request($uri, new Map($get), new Map($post), new Map($files));
 
     $this->assertEquals(serialize($request->uri->parts()), serialize(Vector {'foo','bar'}));
     $this->assertEquals($request->getParam('bar'), 'baz');

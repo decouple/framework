@@ -18,9 +18,9 @@ use Decouple\HTTP\App;
 
 // Http request
 $uri = new Uri($_SERVER['REQUEST_URI']);
-$get = Map::fromArray($_GET);
-$post = Map::fromArray($_POST);
-$files = Map::fromArray($_FILES);
+$get = new Map($_GET);
+$post = new Map($_POST);
+$files = new Map($_FILES);
 $request = new Request($uri, $get, $post, $files);
 
 // Register HTTP-specific services

@@ -42,7 +42,7 @@ class RouterTest extends TestCase {
   }
 
   private function _testRoute(Uri $uri) : mixed {
-    $request = new Request($uri, Map::fromArray(['baz'=>true]), Map {}, Map {});
+    $request = new Request($uri, new Map(['baz'=>true]), Map {}, Map {});
     $dependencies = Map {
       "Test\HTTP\Fixture\RouteDependency" => new RouteDependency(),
       "Decouple\HTTP\Request\Uri" => $uri,

@@ -14,7 +14,7 @@ class RouteTest extends TestCase {
 
     $uri = new Uri('foo/bar');
     $decoupler = new Decoupler($dependencies);
-    $request = new Request($uri, Map::fromArray(['baz'=>true]), Map {}, Map {});
+    $request = new Request($uri, new Map(['baz'=>true]), Map {}, Map {});
     $route = new FunctionRoute('foo/([^/]+)');
     $route->from(function(RouteDependency $dep) : mixed {
       return $dep->double(21);

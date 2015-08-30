@@ -12,7 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/cli.git",
-                "reference": "692424f4c1666df8d08026a467f9d1c15c269f10"
+                "reference": "1cb86dd3481595b251401028857989be8b38e1df"
+            },
+            "require": {
+                "decouple/common": "dev-master",
+                "decouple/decoupler": "dev-master",
+                "decouple/registry": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -32,8 +37,8 @@
                     "email": "drew@phenocode.com"
                 }
             ],
-            "description": "Hack command line utility created for Decouple framework.",
-            "time": "2015-06-10 06:46:30"
+            "description": "Hack command line application container created for Decouple Framework.",
+            "time": "2015-07-11 18:42:22"
         },
         {
             "name": "decouple/common",
@@ -41,7 +46,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/common.git",
-                "reference": "118eab4efe30a4cb403a9c4aec29afd48cc8eb32"
+                "reference": "b1798868ab03ff349dccfd3fef09331ec0a1f4d3"
             },
             "type": "library",
             "autoload": {
@@ -59,8 +64,8 @@
                     "email": "drew@phenocode.com"
                 }
             ],
-            "description": "Common requirements for the Decouple framework.",
-            "time": "2015-06-10 07:13:24"
+            "description": "Common requirements and contracts for the Decouple Framework.",
+            "time": "2015-06-11 09:08:35"
         },
         {
             "name": "decouple/dbal",
@@ -68,7 +73,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/dbal.git",
-                "reference": "1036f2d0e614ba9be6e85aba0d9df1e487c56400"
+                "reference": "b085a2a88df7d3f1a46ace40191432b9f515b03e"
             },
             "type": "library",
             "autoload": {
@@ -95,7 +100,7 @@
                 }
             ],
             "description": "Hack DBAL written for Decouple Framework.",
-            "time": "2015-06-10 06:48:19"
+            "time": "2015-07-14 19:36:10"
         },
         {
             "name": "decouple/dbal-cli",
@@ -298,7 +303,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.phenocode.com/decouple/ui.git",
-                "reference": "e5097c1581a6bb5ceded0155d1fb29dfdf442105"
+                "reference": "d1eee6665f2b858036a9ef5f63609ba531ae9fde"
             },
             "type": "library",
             "autoload": {
@@ -317,7 +322,7 @@
                 }
             ],
             "description": "Hack UI toolkit for Decouple framework",
-            "time": "2015-06-10 06:54:55"
+            "time": "2015-07-11 18:45:15"
         },
         {
             "name": "facebook/xhp-lib",
@@ -325,16 +330,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/xhp-lib.git",
-                "reference": "261f14aaa4270d8e80974755eca217e5d866c952"
+                "reference": "bda55865943077aa3893ee3f6c34a45c7081e274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/xhp-lib/zipball/261f14aaa4270d8e80974755eca217e5d866c952",
-                "reference": "261f14aaa4270d8e80974755eca217e5d866c952",
+                "url": "https://api.github.com/repos/facebook/xhp-lib/zipball/bda55865943077aa3893ee3f6c34a45c7081e274",
+                "reference": "bda55865943077aa3893ee3f6c34a45c7081e274",
                 "shasum": ""
             },
             "require": {
-                "hhvm": "*"
+                "hhvm": "~3.6"
             },
             "require-dev": {
                 "91carriage/phpunit-hhi": "4.5.*",
@@ -363,7 +368,7 @@
                 "hhvm",
                 "xhp"
             ],
-            "time": "2015-05-29 20:46:36"
+            "time": "2015-07-14 17:48:46"
         }
     ],
     "packages-dev": [],

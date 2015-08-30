@@ -31,7 +31,7 @@ class InjectionTest extends TestCase {
     // Create a mock method
     $mock = new MockMethod();
     // Method dependency stores a private int
-    $decoupler = new Decoupler(Map::fromArray([
+    $decoupler = new Decoupler(new Map([
       'Test\Decoupler\Fixture\MethodDependency' => new MethodDependency(42)
     ]));
     // Get the private int
@@ -48,7 +48,7 @@ class InjectionTest extends TestCase {
     $mock = new MockMethod();
 
     // Method dependency stores a private int
-    $decoupler = new Decoupler(Map::fromArray([
+    $decoupler = new Decoupler(new Map([
       'Test\Decoupler\Fixture\MethodDependency' => new MethodDependency(1)
     ]));
 
@@ -69,7 +69,7 @@ class InjectionTest extends TestCase {
    */
   public function testInstanceInjection() : void {
     // PropertyDependency & ConstructorPropertyDependency have public int $value as constructor args
-    $decoupler = new Decoupler(Map::fromArray([
+    $decoupler = new Decoupler(new Map([
       'Test\Decoupler\Fixture\PropertyDependency' => new PropertyDependency(42),
       'Test\Decoupler\Fixture\ConstructorPropertyDependency' => new ConstructorPropertyDependency(42)
     ]));
@@ -107,7 +107,7 @@ class InjectionTest extends TestCase {
    */
   public function testObjectInjection() : void {
     // Property dependency has public int $value
-    $decoupler = new Decoupler(Map::fromArray([
+    $decoupler = new Decoupler(new Map([
       'Test\Decoupler\Fixture\PropertyDependency' => new PropertyDependency(21)
     ]));
     // Create a mock object
