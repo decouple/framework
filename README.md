@@ -19,4 +19,5 @@ Seeds are stored in `app/database/seeds`.
 Migrations are stored in `app/database/migrations`.  
 Commands are stored in `app/database/commands`.
 
-The DBAL and Command Runner supports async.
+The DBAL and Command Runner support Hack's async functionality. 
+See the tests for more information.
