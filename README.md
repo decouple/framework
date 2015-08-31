@@ -1,7 +1,7 @@
 Decouple Framework
 =========
 An attempt to create a loosely coupled toolkit for Hack.
-Based loosely on Laravel.
+Inspired by Laravel.
 
 ## Installation
 ```composer create-project decouple/framework=dev-master```
